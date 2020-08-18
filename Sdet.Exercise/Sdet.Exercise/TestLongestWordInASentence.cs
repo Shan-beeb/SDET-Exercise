@@ -29,23 +29,23 @@ namespace Sdet.Exercise
             var output = Word.GetTheLongestWord(input);
 
             const string expectedWord = "Beautiful";
-            const int indexOfExpectedWord = 0;
+            const int lengthOfExpectedWord = 9;
 
             Assert.AreEqual(expectedWord, output.Content);
-            Assert.AreEqual(indexOfExpectedWord, output.Length);
+            Assert.AreEqual(lengthOfExpectedWord, output.Length);
         }
 
         //Assume there is only one longest word in a sentence.
         [DataTestMethod]
-        [DataRow("The cow jumped over the moon.", "jumped", 2)]
-        [DataRow("The greatest glory in living lies not in never falling, but in rising every time we fall", "greatest", 1)]
-        [DataRow("If life were predictable it would cease to be life, and be without flavor.", "predictable", 3)]
-        [DataRow("If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.", "ridiculously", 5)]
-        public void MultiStringTest(string input,string expectedWord,int indexOfExpectedWord)
+        [DataRow("The cow jumped over the moon.", "jumped", 6)]
+        [DataRow("The greatest glory in living lies not in never falling, but in rising every time we fall", "greatest", 8)]
+        [DataRow("If life were predictable it would cease to be life, and be without flavor.", "predictable", 11)]
+        [DataRow("If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.", "ridiculously", 12)]
+        public void MultiStringTest(string input,string expectedWord,int lengthOfExpectedWord)
         {
             var output = Word.GetTheLongestWord(input);
             Assert.AreEqual(expectedWord, output.Content);
-            Assert.AreEqual(indexOfExpectedWord, output.Length);
+            Assert.AreEqual(lengthOfExpectedWord, output.Length);
         }
     }
 }
