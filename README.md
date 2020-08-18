@@ -1,4 +1,4 @@
-#SDET-Exercise in C#
+# SDET-Exercise in C#
 
 ## Instructions
 
